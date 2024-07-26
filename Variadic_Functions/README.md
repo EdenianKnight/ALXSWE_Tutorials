@@ -12,8 +12,8 @@ data_type variable_name = value;
 
 **Example:**
 ```c
-int score = 90; // Integer variable 'score' with value 90
-char grade = 'A'; // Character variable 'grade' with value 'A'
+int score = 90; /* Integer variable 'score' with value 90*/
+char grade = 'A'; /* Character variable 'grade' with value 'A'*/
 ```
 
 ### Functions in C
@@ -21,14 +21,16 @@ A function is a block of code that performs a specific task.
 
 **Syntax:**
 ```c
-return_type function_name(datatype parameter, datatype parameter) {
+return_type function_name(datatype parameter, datatype parameter)
+{
   statement block
 }
 ```
 
 **Example:**
 ```c
-int sum(int i, int j) {
+int add(int i, int j)
+{
   return (i + j);
 }
 ```
@@ -38,8 +40,9 @@ A variadic function can accept a variable number of arguments. This flexibility 
 
 **Syntax:**
 ```c
-return_type function_name(fixed_parameter, ...) {
-  // ...
+return_type function_name(fixed_parameter, ...)
+{
+  // code ...
 }
 ```
 
@@ -58,7 +61,8 @@ To access the variable arguments, we use macros defined in the `stdarg.h` header
 #include <stdio.h>
 #include <stdarg.h>
 
-int sum(int count, ...) {
+int sum(int count, ...)
+{
   int sum = 0;
   va_list ap;
   va_start(ap, count);
@@ -66,17 +70,19 @@ int sum(int count, ...) {
     sum += va_arg(ap, int);
   }
   va_end(ap);
-  return sum;
+  return (sum);
 }
 
-int main() {
+int main(void)
+{
   printf("Sum of 2, 3, 5 = %d\n", sum(3, 2, 3, 5));
-  return 0;
+  return (0);
 }
 ```
 
 ### Explanation
-1. The `sum` function takes a fixed parameter `count` to specify the number of arguments.
+1. Include Header: `#include <stdarg.h>`
+2. The `sum` function takes a fixed parameter `count` to specify the number of arguments.
 2. Inside the function, a `va_list` variable `ap` is declared.
 3. `va_start(ap, count)` initializes `ap` to point to the first variable argument.
 4. A loop iterates `count` times, accessing each argument using `va_arg(ap, int)`.
