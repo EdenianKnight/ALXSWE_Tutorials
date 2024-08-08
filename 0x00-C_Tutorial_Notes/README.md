@@ -112,6 +112,7 @@ The betty block:
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
     return (0);
@@ -138,7 +139,7 @@ The `main` function’s return value is the program’s exit status, which signa
 ```c
 int main(void)
 {
-    return 0;
+    return (0);
 }
 ```
 
