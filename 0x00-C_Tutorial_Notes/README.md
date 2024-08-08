@@ -1,4 +1,3 @@
-
 # 0x00. C - Hello, World Tutorial Notes
 
 Welcome to the "Hello, World" of C programming! In this tutorial, we will embark on a journey through the basics of C, one of the most powerful and enduring programming languages. Whether you're a novice or brushing up on your skills, this guide will help you understand why C is the backbone of modern software engineering.
@@ -103,6 +102,21 @@ When you compile a C program without specifying an output name, `gcc` defaults t
 ## C Coding Style and `betty-style`
 
 C has a standard coding style that makes your code easier to read and maintain. The `betty-style` tool helps you adhere to these conventions by checking your code for formatting issues.
+
+The betty block:
+```bash
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    return (0);
+}
+```
 
 To check your code:
 ```bash
