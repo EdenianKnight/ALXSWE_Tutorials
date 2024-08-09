@@ -1,0 +1,3 @@
+#!/bin/bash
+export CFILE=$1
+gcc $CFILE -o 4-puts
